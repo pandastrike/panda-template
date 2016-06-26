@@ -1,0 +1,39 @@
+{
+  "name": "panda-template",
+  "version": "0.1.0",
+  "description": "Handlebars + Swag + Panda Goodies in a quick and easy interface",
+  "main": "./lib/index.js",
+  "files": [ "lib", "LICENSE" ],
+  "scripts": {
+    "test": "coffee test/index.coffee",
+    "prepublish": "coffee -o lib/ -c src/*.*coffee",
+    "postpublish": "(node_modules/.bin/json -f package.json version | xargs -I version git tag -am version version) && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pandastrike/panda-template.git"
+  },
+  "keywords": [
+    "handlebars",
+    "swag",
+    "template"
+  ],
+  "author": "Dan Yoder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pandastrike/panda-template/issues"
+  },
+  "homepage": "https://github.com/pandastrike/panda-template#readme",
+  "dependencies": {
+    "fairmont": "^1.1.6",
+    "handlebars": "^4.0.5",
+    "panda-serialize": "^0.2.0",
+    "sprintf": "^0.1.5",
+    "swag": "^0.7.0"
+  },
+  "devDependencies": {
+    "amen": "^1.0.0-alpha-06",
+    "coffee-script": "^1.10.0",
+    "json": "^9.0.3"
+  }
+}
