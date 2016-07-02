@@ -21,5 +21,6 @@ In addition, we include the following helpers:
 - `sprintf <format> <string>`: formats the `<string>` using the printf-style `<format>` string.
 - `hang <indent> <width> <string>`: Format `<string>` with a hanging indent
 of `<indent>` spaces and line `<width>`.
+- `json <value>`: serialize into JSON.
 
 [Swag helpers]:http://elving.github.io/swag/

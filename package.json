@@ -7,6 +7,7 @@
   "scripts": {
     "test": "coffee test/index.coffee",
     "prepublish": "coffee -o lib/ -c src/*.*coffee",
+    "watch": "coffee -o lib/ -cw src/*.*coffee",
     "postpublish": "(node_modules/.bin/json -f package.json version | xargs -I version git tag -am version version) && git push --tags"
   },
   "repository": {
