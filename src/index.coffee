@@ -25,7 +25,8 @@ H.registerHelper
   pluck: block (property, objects, f) ->
     (f object[property]) for object in objects
 
-  join: (delimiter, array) -> join delimiter, array
+  join: block (delimiter, array, f) ->
+    join delimiter, array.map f
 
   sprintf: (format, string) -> sprintf format, string
 
