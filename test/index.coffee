@@ -11,4 +11,8 @@ Amen.describe "panda-template", (context) ->
   context.test "compile", ->
     template = yield read join files, "template.md"
     data = yaml yield read join files, "data.yaml"
-    assert.equal "Hello World\n", compile template, data
+    assert.equal (compile template, data),
+      """
+      Hello World
+      apple-pie, cherry-pie, peach-pie
+      """

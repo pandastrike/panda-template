@@ -1,2 +1,6 @@
 name: World
 greeting: Hello
+pies:
+  - apple
+  - cherry
+  - peach

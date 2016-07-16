@@ -26,7 +26,7 @@ H.registerHelper
     (f object[property]) for object in objects
 
   join: block (delimiter, array, f) ->
-    join delimiter, array.map f
+    [ join delimiter, array.map f ]
 
   sprintf: (format, string) -> sprintf format, string
 
