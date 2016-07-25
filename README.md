@@ -1,5 +1,7 @@
 # panda-template
 
+[![Build Status](https://travis-ci.org/pandastrike/panda-template.svg)](https://travis-ci.org/pandastrike/panda-template)
+
 Handlebars + Swag + Panda Goodies in a quick and easy interface.
 
 ```coffee
