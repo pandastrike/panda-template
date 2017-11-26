@@ -11,9 +11,9 @@ T = new PandaTemplate()
 
 do ->
   template = await read "template.md"
-  data = yield read "data.yaml"
-  T.registerPartial await read "section1", "section1.md"
-  T.registerPartial await read "section2", "section2.md"
+  data = await read "data.yaml"
+  T.registerPartial "section1", await read "section1.md"
+  T.registerPartial "section2", await read "section2.md"
   T.render template, data
 ```
 
