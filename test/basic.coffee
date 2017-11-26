@@ -7,8 +7,8 @@ import pandatemplate from "../src"
 test = ->
   files = join __dirname, "data", "basic"
   T = new pandatemplate()
-  template = yield read join files, "template.md"
-  data = yaml yield read join files, "data.yaml"
+  template = await read join files, "template.md"
+  data = yaml await read join files, "data.yaml"
   assert.equal (T.render template, data),
     """
     Hello World
