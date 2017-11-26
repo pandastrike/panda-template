@@ -1,0 +1,10 @@
+name: World
+greeting: Hello
+pies:
+  - apple
+  - cherry
+  - peach
+cookies:
+  - chocolate-chip
+  - snickerdoodle
+  - sugar

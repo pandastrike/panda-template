@@ -1,0 +1,3 @@
+{{#join ", " cookies}}
+{{.}}-cookie
+{{~/join}}

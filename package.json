@@ -1,12 +1,15 @@
 {
   "name": "panda-template",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Handlebars + Swag + Panda Goodies in a quick and easy interface",
   "main": "./lib/index.js",
-  "files": [ "lib", "LICENSE" ],
+  "files": [
+    "lib",
+    "LICENSE"
+  ],
   "scripts": {
-    "test": "coffee test/index.coffee",
-    "prepublish": "coffee -o lib/ -c src/*.*coffee",
+    "test": "coffee --transpile test/index.coffee",
+    "prepare": "coffee --transpile --compile --output lib/ src/*.*coffee",
     "watch": "coffee -o lib/ -cw src/*.*coffee",
     "postpublish": "(node_modules/.bin/json -f package.json version | xargs -I version git tag -am version version) && git push --tags"
   },
@@ -26,15 +29,18 @@
   },
   "homepage": "https://github.com/pandastrike/panda-template#readme",
   "dependencies": {
-    "fairmont": "^1.1.6",
-    "handlebars": "^4.0.5",
+    "fairmont": "2.0.1",
+    "handlebars": "4.0.11",
     "panda-serialize": "^0.2.0",
-    "sprintf": "^0.1.5",
-    "swag": "^0.7.0"
+    "sprintf-js": "1.1.1",
+    "swag": "0.7.0"
   },
   "devDependencies": {
-    "amen": "^1.0.0-alpha-06",
-    "coffee-script": "^1.10.0",
+    "amen": "2.0.0",
+    "babel-core": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "coffeescript": "2.0.2",
     "json": "^9.0.3"
   }
 }

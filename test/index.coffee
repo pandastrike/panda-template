@@ -1,18 +1,11 @@
-Amen = require "amen"
-assert = require "assert"
-{join} = require "path"
-{read} = require "fairmont"
-{yaml} = require "panda-serialize"
-compile = require "../src"
-files = join __dirname, "data"
+import "babel-polyfill"
+import {print, test} from "amen"
 
-Amen.describe "panda-template", (context) ->
+import basic from "./basic"
+import partial from "./partial"
 
-  context.test "compile", ->
-    template = yield read join files, "template.md"
-    data = yaml yield read join files, "data.yaml"
-    assert.equal (compile template, data),
-      """
-      Hello World
-      apple-pie, cherry-pie, peach-pie
-      """
+do ->
+  print await test "Panda Template", [
+    test "Basic Render", basic
+    test "Render with Partial", partial
+  ]
