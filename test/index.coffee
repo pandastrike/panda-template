@@ -1,14 +1,11 @@
-Amen = require "amen"
-assert = require "assert"
-{join} = require "path"
-{read} = require "fairmont"
-{yaml} = require "panda-serialize"
-{render} = require "../src"
-files = join __dirname, "data"
+import "babel-polyfill"
+import {print, test} from "amen"
 
-basic = require "./basic"
-partial = require "./partial"
+import basic from "./basic"
+import partial from "./partial"
 
-Amen.describe "panda-template", (context) ->
-  basic context
-  partial context
+do ->
+  print await test "Panda Template", [
+    test "Basic Render", basic
+    test "Render with Partial", partial
+  ]

@@ -1,7 +1,8 @@
-{find, isDefined, identity} = require "fairmont"
-sprintf = require "sprintf"
-H = require "handlebars"
-S = require "swag"
+import {find, isDefined, identity} from "fairmont"
+import sprintf from "sprintf-js"
+import H from "handlebars"
+import S from "swag"
+
 S.registerHelpers H
 join = (d, array) -> array.join d
 
@@ -65,4 +66,4 @@ class PandaTemplate
     (@H.compile template, noEscape: true)(context)
   registerPartial: (name, template) -> @H.registerPartial name, template
 
-module.exports = PandaTemplate
+export default PandaTemplate
