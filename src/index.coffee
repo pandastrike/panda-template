@@ -65,5 +65,6 @@ class PandaTemplate
   render: (template, context) ->
     (@H.compile template, noEscape: true)(context)
   registerPartial: (name, template) -> @H.registerPartial name, template
+  handlebars: -> @H
 
 export default PandaTemplate

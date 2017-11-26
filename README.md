@@ -5,10 +5,16 @@
 Handlebars + Swag + Panda Goodies in a quick and easy interface.
 
 ```coffee
-render = require "panda-template"
-template = yield read "template.md"
-data = yield read "data.yaml"
-render template, data
+import PandaTemplate from "panda-template"
+import {read} from "fairmont"
+T = new PandaTemplate()
+
+do ->
+  template = await read "template.md"
+  data = yield read "data.yaml"
+  T.registerPartial await read "section1", "section1.md"
+  T.registerPartial await read "section2", "section2.md"
+  T.render template, data
 ```
 
 Built on Handlebars and auto-includes support
@@ -26,3 +32,20 @@ of `<indent>` spaces and line `<width>`.
 - `json <value>`: serialize into JSON.
 
 [Swag helpers]:http://elving.github.io/swag/
+
+## API
+
+#### `render`
+> template, context => rendered template
+
+Outputs a rendered template using Handlebars compile.
+
+#### `registerPartial`
+> name, template => null
+
+PandaTemplate associates the Handlebars library as an instance variable when you construct a new PandaTemplate class.  This registers a template partial, at the given name, with that Handlebars instance.
+
+#### `handlebars`
+> null => instance of Handlebars
+
+PandaTemplate associates the Handlebars library as an instance variable when you construct a new PandaTemplate class. This exposes that instance for more developer flexibility.
