@@ -58,5 +58,11 @@ H.registerHelper
   parsePath: block (s, f) ->
     f p for p in [ "/", s.split("/")[1..]... ]
 
-module.exports = (template, context) ->
-  (H.compile template, noEscape: true)(context)
+
+class PandaTemplate
+  constructor: -> @H = H
+  render: (template, context) ->
+    (@H.compile template, noEscape: true)(context)
+  registerPartial: (name, template) -> @H.registerPartial name, template
+
+module.exports = PandaTemplate

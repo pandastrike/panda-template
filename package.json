@@ -1,9 +1,12 @@
 {
   "name": "panda-template",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Handlebars + Swag + Panda Goodies in a quick and easy interface",
   "main": "./lib/index.js",
-  "files": [ "lib", "LICENSE" ],
+  "files": [
+    "lib",
+    "LICENSE"
+  ],
   "scripts": {
     "test": "coffee test/index.coffee",
     "prepublish": "coffee -o lib/ -c src/*.*coffee",

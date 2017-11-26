@@ -3,16 +3,12 @@ assert = require "assert"
 {join} = require "path"
 {read} = require "fairmont"
 {yaml} = require "panda-serialize"
-compile = require "../src"
+{render} = require "../src"
 files = join __dirname, "data"
 
-Amen.describe "panda-template", (context) ->
+basic = require "./basic"
+partial = require "./partial"
 
-  context.test "compile", ->
-    template = yield read join files, "template.md"
-    data = yaml yield read join files, "data.yaml"
-    assert.equal (compile template, data),
-      """
-      Hello World
-      apple-pie, cherry-pie, peach-pie
-      """
+Amen.describe "panda-template", (context) ->
+  basic context
+  partial context
