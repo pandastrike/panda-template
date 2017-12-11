@@ -1,15 +1,15 @@
 {
   "name": "panda-template",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Handlebars + Swag + Panda Goodies in a quick and easy interface",
   "main": "./lib/index.js",
   "files": [
-    "lib",
+    "lib/",
     "LICENSE"
   ],
   "scripts": {
     "test": "coffee --transpile test/index.coffee",
-    "prepare": "coffee --transpile --compile --output lib/ src/*.*coffee",
+    "prepare": "node_modules/.bin/coffee --compile --transpile --inline-map --output lib/ src/",
     "watch": "coffee -o lib/ -cw src/*.*coffee",
     "postpublish": "(node_modules/.bin/json -f package.json version | xargs -I version git tag -am version version) && git push --tags"
   },
