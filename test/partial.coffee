@@ -1,11 +1,11 @@
 import assert from "assert"
 import {join} from "path"
-import {read} from "fairmont"
+import {read} from "panda-quill"
 import {yaml} from "panda-serialize"
 import pandatemplate from "../src"
 
 test = ->
-  files = join __dirname, "data", "partial"
+  files = join __dirname, "..", "..", "..", "test", "data", "partial"
   T = new pandatemplate()
   template = await read join files, "template.md"
   partialTemplate = await read join files, "cookies.md"

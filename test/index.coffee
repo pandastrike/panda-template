@@ -1,4 +1,3 @@
-import "babel-polyfill"
 import {print, test} from "amen"
 
 import basic from "./basic"
