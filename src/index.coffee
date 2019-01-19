@@ -2,9 +2,7 @@ import {identity} from "panda-garden"
 import {isDefined} from "panda-parchment"
 import sprintf from "sprintf-js"
 import H from "handlebars"
-import S from "swag"
 
-S.registerHelpers H
 join = (d, array) -> array.join d
 
 block = (f) ->

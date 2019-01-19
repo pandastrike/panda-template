@@ -1,6 +1,6 @@
 {
   "name": "panda-template",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "description": "Handlebars + Swag + Panda Goodies in a quick and easy interface",
   "main": "build/npm/src/index.js",
   "files": [
@@ -36,8 +36,7 @@
     "handlebars": "^4.0.12",
     "panda-garden": "^3.2.0",
     "panda-parchment": "^4.2.0",
-    "sprintf-js": "^1.1.2",
-    "swag": "0.7.0"
+    "sprintf-js": "^1.1.2"
   },
   "devDependencies": {
     "amen": "^2.1.0",
