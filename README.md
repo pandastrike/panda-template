@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/pandastrike/panda-template.svg)](https://travis-ci.org/pandastrike/panda-template)
 
-Handlebars + Swag + Panda Goodies in a quick and easy interface.
+Handlebars + Panda Goodies in a quick and easy interface.
 
 ```coffee
 import PandaTemplate from "panda-template"
@@ -17,8 +17,7 @@ do ->
   T.render template, data
 ```
 
-Built on Handlebars and auto-includes support
-for all [Swag helpers][].
+Built on Handlebars.
 
 In addition, we include the following helpers:
 
@@ -30,8 +29,6 @@ In addition, we include the following helpers:
 - `hang <indent> <width> <string>`: Format `<string>` with a hanging indent
 of `<indent>` spaces and line `<width>`.
 - `json <value>`: serialize into JSON.
-
-[Swag helpers]:http://elving.github.io/swag/
 
 ## API
 
