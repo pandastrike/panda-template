@@ -1,7 +1,7 @@
 {
   "name": "panda-template",
   "version": "1.0.0",
-  "description": "Handlebars + Swag + Panda Goodies in a quick and easy interface",
+  "description": "Handlebars + Panda Goodies in a quick and easy interface",
   "main": "build/npm/src/index.js",
   "files": [
     "build/npm/src",
@@ -14,7 +14,6 @@
   },
   "keywords": [
     "handlebars",
-    "swag",
     "template"
   ],
   "contributors": [
