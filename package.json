@@ -1,18 +1,13 @@
 {
   "name": "panda-template",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "description": "Handlebars + Swag + Panda Goodies in a quick and easy interface",
-  "main": "./lib/index.js",
+  "main": "build/npm/src/index.js",
   "files": [
-    "lib/",
+    "build/npm/src",
     "LICENSE"
   ],
-  "scripts": {
-    "test": "coffee --transpile test/index.coffee",
-    "prepare": "node_modules/.bin/coffee --compile --transpile --inline-map --output lib/ src/",
-    "watch": "coffee -o lib/ -cw src/*.*coffee",
-    "postpublish": "(node_modules/.bin/json -f package.json version | xargs -I version git tag -am version version) && git push --tags"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pandastrike/panda-template.git"
@@ -22,25 +17,33 @@
     "swag",
     "template"
   ],
-  "author": "Dan Yoder",
+  "contributors": [
+    {
+      "name": "Dan Yoder",
+      "email": "dan@pandastrike.com"
+    },
+    {
+      "name": "David Harper",
+      "email": "david@pandastrike.com"
+    }
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/pandastrike/panda-template/issues"
   },
   "homepage": "https://github.com/pandastrike/panda-template#readme",
   "dependencies": {
-    "fairmont": "2.0.1",
-    "handlebars": "4.0.11",
-    "panda-serialize": "^0.2.0",
-    "sprintf-js": "1.1.1",
+    "handlebars": "^4.0.12",
+    "panda-garden": "^3.2.0",
+    "panda-parchment": "^4.2.0",
+    "sprintf-js": "^1.1.2",
     "swag": "0.7.0"
   },
   "devDependencies": {
-    "amen": "2.0.0",
-    "babel-core": "^6.26.0",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "coffeescript": "2.0.2",
-    "json": "^9.0.3"
+    "amen": "^2.1.0",
+    "panda-9000": "^4.4.0",
+    "panda-builder": "^3.2.1",
+    "panda-quill": "^3.4.5",
+    "panda-serialize": "^0.4.0"
   }
 }
