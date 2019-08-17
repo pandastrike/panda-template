@@ -1,6 +1,6 @@
 {
   "name": "panda-template",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Handlebars + Panda Goodies in a quick and easy interface",
   "main": "build/npm/src/index.js",
   "files": [
@@ -33,15 +33,15 @@
   "homepage": "https://github.com/pandastrike/panda-template#readme",
   "dependencies": {
     "handlebars": "^4.1.2",
-    "panda-garden": "^3.2.0",
-    "panda-parchment": "^4.2.0",
+    "panda-garden": "^4.0.0",
+    "panda-parchment": "^5.0.0",
     "sprintf-js": "^1.1.2"
   },
   "devDependencies": {
     "amen": "^2.1.0",
-    "panda-9000": "^4.4.0",
-    "panda-builder": "^3.2.1",
-    "panda-quill": "^3.4.5",
-    "panda-serialize": "^0.7.0"
+    "panda-9000": "^5.0.0",
+    "panda-builder": "^4.0.0",
+    "panda-quill": "^4.0.0",
+    "panda-serialize": "^1.0.0"
   }
 }
